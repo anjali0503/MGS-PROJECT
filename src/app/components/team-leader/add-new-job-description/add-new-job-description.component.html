@@ -1,0 +1,32 @@
+<app-tl-menu></app-tl-menu>
+
+
+<h2>Add New Job Description</h2>
+<br>
+<div [hidden]="submitted">
+    <form  (submit)="addJobDescription()">
+      <label>EmployeeId :  </label>
+      <input type="text" name="EmployeeId" [(ngModel)]="jobdescription.employeeDetails.employeeId">
+
+      <label>No Of Employee Required : </label>
+      <input type="text" name="skill1" [(ngModel)]="jobdescription.skill1">
+  
+      <label>Skill 1 : </label>
+      <input type="text" name="skill2" [(ngModel)]="jobdescription.skill2">
+
+      <label>Skill 2 : </label>
+      <input type="text" name="skill3" [(ngModel)]="jobdescription.skill3">
+
+      <label>Skill 3 : </label>
+      <input type="text" name="projectId" [(ngModel)]="jobdescription.projectId">
+
+      <label>Project Id : </label>
+      <input type="text" name="jobStatus" [(ngModel)]="jobdescription.jobStatus">
+
+      <input type="submit" value="Add New Job Description">
+    </form>
+  </div>
+  <div [hidden]="!submitted">
+    <h4>New Job Description Added Successfully</h4>
+    <button (click)="backtohome()">Go Back to Home</button>
+  </div>
